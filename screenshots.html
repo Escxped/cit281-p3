@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 3 – Screenshots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, rgba(42,155,132,1) 0%, rgba(87,108,199,1) 51%, rgba(83,237,206,1) 100%);
+      color: #fff;
+      padding: 2rem;
+      margin: 0;
+    }
+    h1 { color: #ffe066; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+    .lightbox {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Project 3 – Screenshot Gallery</h1>
+
+  <div class="gallery">
+    <a href="#img1"><img src="p3-output.png" alt="Output Screenshot" /></a>
+    <a href="#img2"><img src="p3-code.png" alt="Code Screenshot" /></a>
+  </div>
+
+  <div id="img1" class="lightbox"><a href="#"><img src="p3-output.png" alt="Output Screenshot" /></a></div>
+  <div id="img2" class="lightbox"><a href="#"><img src="p3-code.png" alt="Code Screenshot" /></a></div>
+
+  <a href="index.html" class="back-link">← Back to Project Overview</a>
+</body>
+</html>
